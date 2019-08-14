@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+
+    <modules>
+        <Techinflo_SocialMedia>
+            <version>1.0.0</version>
+        </Techinflo_SocialMedia>
+    </modules>
+
+    <frontend>
+
+        <layout>
+            <updates>
+                <socialmedia>
+                    <file>techinflo_socialmedia.xml</file>
+                </socialmedia>
+            </updates>
+        </layout>
+
+        <translate>
+            <modules>
+                <Techinflo_SocialMedia>
+                    <files>
+                        <default>Techinflo_SocialMedia.csv</default>
+                    </files>
+                </Techinflo_SocialMedia>
+            </modules>
+        </translate>
+		
+    </frontend>
+
+    <global>
+
+	<acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <techinfloconfig translate="title" module="socialmedia">
+                                        <title>Techinflo SocialMedia</title>
+                                    </techinfloconfig>
+                                    <techinflosocialmedia translate="title" module="socialmedia">
+                                        <title>Techinflo SocialMedia</title>
+                                    </techinflosocialmedia>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+
+        <blocks>
+            <socialmedia>
+                <class>Techinflo_SocialMedia_Block</class>
+            </socialmedia>
+        </blocks>
+
+        <helpers>
+            <socialmedia>
+                <class>Techinflo_SocialMedia_Helper</class>
+            </socialmedia>
+        </helpers>
+
+        <models>
+            <socialmedia>
+                <class>Techinflo_SocialMedia_Model_Observer</class>
+            </socialmedia>
+        </models>
+		
+		<events>
+		
+			<adminhtml_controller_salesrule_prepare_save>
+				<observers>
+					<techinflo_socialmedia_observer>
+						<type>singleton</type>
+						<class>Techinflo_SocialMedia_Model_Observer</class>
+						<method>salesrule_save_after</method>
+					</techinflo_socialmedia_observer>
+				</observers>
+			</adminhtml_controller_salesrule_prepare_save>
+			
+			<adminhtml_controller_catalogrule_prepare_save>
+				<observers>
+					<techinflo_socialmedia_observer>
+						<type>singleton</type>
+						<class>Techinflo_SocialMedia_Model_Observer</class>
+						<method>catalogrule_save_after</method>
+					</techinflo_socialmedia_observer>
+				</observers>
+			</adminhtml_controller_catalogrule_prepare_save>
+			
+			<catalog_product_save_after>
+				<observers>
+					<techinflo_socialmedia_observer>
+						<type>singleton</type>
+						<class>Techinflo_SocialMedia_Model_Observer</class>
+						<method>catalog_product_save_after</method>
+					</techinflo_socialmedia_observer>
+				</observers>
+			</catalog_product_save_after>
+		
+			<adminhtml_block_html_before>
+				<observers>
+					<techinflo_socialmedia_blockobserver>
+						<type>singleton</type>
+						<class>Techinflo_SocialMedia_Model_Blockobserver</class>
+						<method>promo_rule</method>
+					</techinflo_socialmedia_blockobserver>
+				</observers>
+			</adminhtml_block_html_before>
+			
+		</events>
+		
+		 <resources>
+            <techinflo_socialmedia_setup>
+                <setup>
+                    <module>Techinflo_SocialMedia</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </techinflo_socialmedia_setup>
+        </resources>
+    </global>
+</config>

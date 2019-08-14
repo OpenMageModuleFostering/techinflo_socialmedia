@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* @package    Techinflo_SocialMedia
+* @copyright  Copyright (c) 2013 Optimiseweb Ltd
+* @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <Techinflo_SocialMedia>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Techinflo_SocialMedia>
+    </modules>
+</config>

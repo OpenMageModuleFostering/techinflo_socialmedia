@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <techinfloconfig translate="title" module="socialmedia">
+                                        <title>Techinflo SocialMedia</title>
+                                    </techinfloconfig>
+                                    <techinflosocialmedia translate="title" module="socialmedia">
+                                        <title>Techinflo SocialMedia</title>
+                                    </techinflosocialmedia>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

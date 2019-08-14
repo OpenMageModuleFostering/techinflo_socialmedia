@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+
+    <tabs>
+        <techinfloconfig translate="label comment" module="socialmedia">
+            <label>Techinflo Social Media</label>
+            <sort_order>0</sort_order>
+        </techinfloconfig>
+    </tabs>
+
+    <sections>
+
+        <techinflosocialmedia translate="label comment" module="socialmedia">
+            <label>Social Media Configuration</label>
+            <tab>techinfloconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>99999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+
+            <groups>
+                <facebook translate="label comment" module="socialmedia">
+                    <label>Facebook API Configuration</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <fbenabled translate="label comment" module="socialmedia">
+                            <label>Enabled</label>
+							<comment>To Enable / Disble Facebook Post Functionality</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fbenabled>
+                        <fbapikey translate="label comment" module="socialmedia">
+                            <label>API ID</label>
+                            <comment>Facebook API key</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fbapikey>
+						 <fbsecretkey translate="label comment" module="socialmedia">
+                            <label>Secret Key</label>
+                            <comment>Facebook Secret key</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fbsecretkey>
+						<fbaccesstoken translate="label comment" module="socialmedia">
+                            <label>Access Token</label>
+                            <comment>Facebook Profile Access Token</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fbaccesstoken>
+                    </fields>
+                </facebook>
+
+                <twitter translate="label comment" module="socialmedia">
+                    <label>Twitter API Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<twenabled translate="label comment" module="socialmedia">
+                            <label>Enabled</label>
+							<comment>To Enable / Disable Twitter Post Functionality</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </twenabled>
+						   <twapikey translate="label comment" module="socialmedia">
+								<label>API Key(API ID)</label>
+								<comment>Twitter API key</comment>
+								<frontend_type>text</frontend_type>
+								<sort_order>2</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</twapikey>
+							<twsecretkey translate="label comment" module="socialmedia">
+								<label>Secret Key</label>
+								<comment>Twitter Secret key</comment>
+								<frontend_type>text</frontend_type>
+								<sort_order>3</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</twsecretkey>
+							<twoauth translate="label comment" module="socialmedia">
+								<label>OAuth Key</label>
+								<comment>Twitter API Authentication Key</comment>
+								<frontend_type>text</frontend_type>
+								<sort_order>4</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</twoauth>
+							 <twoauthsecretkey translate="label comment" module="socialmedia">
+								<label> OAuth Secret Key</label>
+								<comment>Twitter API Authentication Secret key</comment>
+								<frontend_type>text</frontend_type>
+								<sort_order>5</sort_order>
+								<show_in_default>1</show_in_default>
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+							</twoauthsecretkey>
+                    </fields>
+                </twitter>
+
+                <!-- <productconf translate="label comment" module="socialmedia">
+                    <label>Products Media Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <producttype translate="label comment" module="socialmedia">
+                            <label>Share Activity Type</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>3</sort_order>
+                            <source_model>techinflo_socialmediaoption/system_config_source_producttype_values</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                        </producttype>
+                    </fields>
+                </productconf>
+
+                <promoconf translate="label comment" module="socialmedia">
+                    <label>Promotional Media Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <promotype translate="label comment" module="socialmedia">
+                            <label>Share Activity Type</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>5</sort_order>
+                            <source_model>techinflo_socialmediaoption/system_config_source_promotype_values</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                        </promotype>
+                    </fields>
+                </promoconf> -->
+            </groups>
+        </techinflosocialmedia>
+    </sections>
+</config>
