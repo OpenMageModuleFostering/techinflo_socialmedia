@@ -49,7 +49,7 @@ class Techinflo_SocialMedia_Model_Observer
 		  "access_token" => $access_token, // this is the main access token (facebook profile)
 		  "message" => $product_info["short_description"],
 		  "link" => $product_info["url"],
-		  "picture" => $product_image,
+		 // "picture" => $product_image,
 		  "name" => $product_title,
 		  "caption" => $product_tagline,
 		  "description" => $product_info["description"],
