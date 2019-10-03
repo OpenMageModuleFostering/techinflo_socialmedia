@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Techinflo_SocialMedia",
+    "name": "OpenMageModuleFostering\/Techinflo_SocialMedia",
     "type": "magento-module",
     "license": "OSL-3.0",
     "homepage": "",
     "description": "Techinflo Social Media Extension provides magento admin to integrate with facebook and twitter account and post activities on the wall.",
     "authors": [
-    {
-        "name": "Techinflo",
-        "email": "anil.gupta@techinflo.com"
-    }
-],
+        {
+            "name": "Techinflo",
+            "email": "anil.gupta@techinflo.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
